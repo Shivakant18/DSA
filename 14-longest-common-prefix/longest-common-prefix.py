@@ -14,7 +14,7 @@ class Solution(object):
         last = strs[-1]
         ans = []
 
-        # 2. Sirf pehli aur aakhri string ke characters compare karo
+        # 2. Sirf pehli aur aakhri string ke characters compare karo beach k automatic ho ga.
         for i in range(min(len(first), len(last))):
             if first[i] != last[i]:
                 break
