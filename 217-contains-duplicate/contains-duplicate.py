@@ -1,14 +1,14 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        unique_elements = set()
+        s = set()
         
         for x in nums:
             
-            if x in unique_elements:
+            if x in s:
                 return True
             
             
-            unique_elements.add(x)
+            s.add(x)
             
        
         return False
