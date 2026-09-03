@@ -4,12 +4,12 @@ class Solution:
         Do not return anything, modify nums1 in-place instead.
         """
         """
-         // sabse pahle hamko jo array diya hai or jo num1 m ad krna ha num2 ki value .
-         // uske baad hum sort array kare gye 
-         sorted array ko hum num1  store kara .
+         // sabse pahle hamko jo array diya hai or jo num1 usme last index se num2 add krna ha value .
+         // uske baad hum sort array kare gye num1 ko.
          """    
-        # 1. nums2 ke elements ko nums1 ke pichhle hisse (0s ki jagah) me daal do
-        nums1[m:] = nums2
+       # nums1 ke last n positions par nums2 ke elements copy karo
+        for i in range(n):
+            nums1[m + i] = nums2[i]
         
         # 2. nums1 ko in-place sort kar do
         nums1.sort()
