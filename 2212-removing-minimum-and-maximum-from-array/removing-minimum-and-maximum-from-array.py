@@ -4,17 +4,17 @@ class Solution:
         if n <= 2:
             return n
 
-        min_idx = nums.index(min(nums))
-        max_idx = nums.index(max(nums))
+        min1 = nums.index(min(nums))
+        max1= nums.index(max(nums))
 
-        i = min(min_idx, max_idx)
-        j = max(min_idx, max_idx)
+        i = min(min1, max1)
+        j = max(min1, max1)
 
-        front_only = j + 1
+        front = j + 1
 
-        back_only = n-i
+        back = n-i
 
-        both_ends = (i + 1) + (n - j)
+        both = (i + 1) + (n - j)
 
-        return min(front_only, back_only, both_ends)
+        return min(front, back, both)
         
