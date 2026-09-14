@@ -1,18 +1,17 @@
-/**
- * @param {number} x
- * @return {boolean}
- */
 var isPalindrome = function(x) {
-    if (x < 0 || (x % 10 === 0 && x !==0)) {
-        return false;
+    if (x < 0) return false;
+
+    const s = x.toString();
+    let left = 0;
+    let right = s.length - 1;
+
+    while (left < right) {
+        if (s[left] !== s[right]) {
+            return false;
+        }
+        left++;
+        right--;
     }
 
-    let rev = 0;
-    while (x > rev) {
-        rev =  (rev * 10) + (x % 10)
-        x = (x / 10) | 0;
-    }
-
-    return x === rev || x === ((rev / 10) | 0);
-    
+    return true;
 };
